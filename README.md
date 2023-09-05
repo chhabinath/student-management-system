@@ -1,10 +1,9 @@
-# Student Management System
 
+# Student Management System
 
 ## Description
 
-The Student Management System is a web application designed to manage student records.
-It allows you to perform CRUD (Create, Read, Update, Delete) operations on student data. This application is built using Spring Boot, Thymeleaf, and MySQL.
+The Student Management System is a web application designed to manage student records. It allows you to perform CRUD (Create, Read, Update, Delete) operations on student data. This application is built using Spring Boot, Thymeleaf, and MySQL.
 
 ## Features
 
@@ -31,38 +30,44 @@ Follow these instructions to get the project up and running on your local machin
 
    ```bash
    git clone https://github.com/your-username/student-management-system.git
-   
+   ```
+
 2. Navigate to the project directory:
 
-    ```bash
+   ```bash
    cd student-management-system
-  
-  Configure the database connection in application.properties.
+   ```
 
-3. Build the project using Maven:
+3. Configure the database connection in `application.properties`.
 
-  mvn clean install
+4. Build the project using Maven:
 
-4. Run the application:
+   ```bash
+   mvn clean install
+   ```
 
-java -jar target/student-management-system-1.0.jar
-Access the application in your web browser at http://localhost:8080/students.
+5. Run the application:
 
-Usage
-Browse to the application's homepage to view the list of students.
-Use the "Add Student" button to create a new student record.
-Click the "Update" button next to a student to edit their information.
-Click the "Delete" button to remove a student from the system.
+   ```bash
+   java -jar target/student-management-system-1.0.jar
+   ```
 
-Acknowledgments
-Spring Boot
-Thymeleaf
-Bootstrap
-MySQL
+6. Access the application in your web browser at `http://localhost:8080`.
 
-Make sure to replace the placeholders such as `your-username` and `student-management-system-1.0.jar`
-with the appropriate information for your project. You can also add more sections or details as needed for your specific project.
+## Usage
+
+- Browse to the application's homepage to view the list of students.
+- Use the "Add Student" button to create a new student record.
+- Click the "Update" button next to a student to edit their information.
+- Click the "Delete" button to remove a student from the system.
 
 
+## Acknowledgments
 
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Thymeleaf](https://www.thymeleaf.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [MySQL](https://www.mysql.com/)
+```
 
+You can use this single `README.md` file for your GitHub repository. Simply replace `your-username` and other placeholders with the appropriate information for your project.
