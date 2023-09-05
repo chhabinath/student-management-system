@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Student Management System</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="mx-auto">
+            <!-- The application logo and navigation link -->
+            <a class="navbar-brand text-center text-white" th:href="@{/students}">Student Management System</a>
+        </div>
+        <!-- Add your navigation links here -->
+    </nav>
+    
+    <br>
+    <br>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="row">
+            <h1>Student List</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Button for adding a new student -->
+                <a th:href="@{/students/new}" class="btn btn-primary btn-sm mb-3">Add Student</a>
+            </div>
+        </div>
+
+        <!-- Table for displaying student information -->
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Students First Name</th>
+                    <th>Students Last Name</th>
+                    <th>Students Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterate over a list of students and display their information -->
+                <tr th:each="student: ${students}">
+                    <td th:text="${student.firstName}"></td>
+                    <td th:text="${student.lastName}"></td>
+                    <td th:text="${student.email}"></td>
+                    <td>
+                        <!-- Buttons for updating and deleting a student -->
+                        <a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary">Update</a>
+                        <a th:href="@{/students/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
