@@ -70,4 +70,3 @@ Follow these instructions to get the project up and running on your local machin
 - [MySQL](https://www.mysql.com/)
 ```
 
-You can use this single `README.md` file for your GitHub repository. Simply replace `your-username` and other placeholders with the appropriate information for your project.
